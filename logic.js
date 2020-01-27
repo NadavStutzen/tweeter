@@ -52,7 +52,7 @@ const Tweeter = function(){
             if(posts[postIndex].id === postId){
                 posts[postIndex].comments.push({id : `c${commentIdCounter}`,text})
                 commentIdCounter++
-                break
+                
             }
         }
     }

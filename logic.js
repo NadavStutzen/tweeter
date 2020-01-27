@@ -14,7 +14,8 @@ const Tweeter = function(){
             comments: [
                 { id: "c1", text: "First comment on first post!" },
                 { id: "c2", text: "Second comment on first post!!" },
-                { id: "c3", text: "Third comment on first post!!!" }
+                { id: "c3", text: "Third comment on first post!!!" },
+                { id: "c4", text: "Third comment on firdsfdsfdsfdfst post!!!" }
             ]
         },
         {

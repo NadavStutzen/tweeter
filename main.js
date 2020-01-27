@@ -2,7 +2,6 @@ const tweet = Tweeter();
 const rend = Renderer();
 rend.renderPosts(tweet.getPosts());
 
-//Listener for click on "Tweet"
 $("#post").on("click", function() {
   const postText = $(this)
     .siblings("input")
@@ -18,7 +17,6 @@ $("#post").on("click", function() {
   }
 });
 
-//Listener for click on "Delete Post"
 $("div").on("click", ".delete", function() {
   const dataId = $(this)
     .closest(".post")
@@ -27,7 +25,7 @@ $("div").on("click", ".delete", function() {
   rend.renderPosts(tweet.getPosts());
 });
 
-//Listener for click on "Add Comment"
+
 $("div").on("click", "button", function() {
   const postId = $(this)
     .closest(".post")
@@ -43,7 +41,6 @@ $("div").on("click", "button", function() {
   }
 });
 
-//Listener for click on "x(delete comment)"
 $("#posts").on("click", ".delete-comment", function() {
   const postId = $(this)
     .closest(".post")

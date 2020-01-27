@@ -1,9 +1,3 @@
-// The module that manages our posts logic
-// Storing all our twits (not the same as tweets)
-// Posting a twit
-// Commenting on twits
-// Removing twits
-// Removing comments
 
 
 const Tweeter = function(){
@@ -39,18 +33,18 @@ const Tweeter = function(){
         postIdCounter++
     }
     const removePost = function(postId){
-        for(postIndex in posts){
-            if(posts[postIndex].id === postId){
-                posts.splice(postIndex,1)
+        for(let i in posts){
+            if(posts[i].id === postId){
+                posts.splice(i,1)
                 break
             }
         }
     }
     
     const addComment = function(text,postId){
-        for(postIndex in posts){
-            if(posts[postIndex].id === postId){
-                posts[postIndex].comments.push({id : `c${commentIdCounter}`,text})
+        for(post of posts){
+            if(post.id === postId){
+                post.comments.push({id : `c${commentIdCounter}`,text})
                 commentIdCounter++
                 
             }
